@@ -13,8 +13,10 @@
         }
     ],
     "require": {
-        "php": ">=5.3",
-        "ext-curl": "*"
+        "php": ">=7.0",
+        "ext-curl": "*",
+        "ext-mbstring": "*",
+        "ext-simplexml": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "*",

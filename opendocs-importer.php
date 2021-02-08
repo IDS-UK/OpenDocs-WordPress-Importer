@@ -20,16 +20,16 @@
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
-	die;
+    die;
 }
 
 function my_add_weekly( $schedules ) {
-	// add a 'weekly' schedule to the existing set
-	$schedules['thirty'] = array(
-		'interval' => 1800,
-		'display' => __('30 Minutes')
-	);
-	return $schedules;
+    // add a 'weekly' schedule to the existing set
+    $schedules['thirty'] = array(
+        'interval' => 1800,
+        'display' => __('30 Minutes')
+    );
+    return $schedules;
 }
 add_filter( 'cron_schedules', 'my_add_weekly' );
 
@@ -75,8 +75,8 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/class-opendocs-importer.php
  */
 function run_opendocs_importer() {
 
-	$plugin = new OpenDocs_Importer();
-	$plugin->run();
+    $plugin = new OpenDocs_Importer();
+    $plugin->run();
 
 }
 run_opendocs_importer();

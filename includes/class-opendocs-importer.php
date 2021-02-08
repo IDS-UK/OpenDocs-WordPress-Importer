@@ -150,25 +150,26 @@ class OpenDocs_Importer {
 		$this->loader->add_action( 'wp_ajax_getCollections', $plugin_admin, 'getCollections' );
 		$this->loader->add_action( 'wp_ajax_getACFields', $plugin_admin, 'getACFields' );
 		$this->loader->add_action( 'wp_ajax_getItemsInCollection', $plugin_admin, 'getItemsInCollection' );
-		$this->loader->add_action( 'wp_ajax_updateRejectedItems', $plugin_admin, 'updateRejectedItems' );
 		$this->loader->add_action( 'wp_ajax_insertItems', $plugin_admin, 'insertItems' );
 		$this->loader->add_action( 'wp_ajax_getImportedPostIDs', $plugin_admin, 'getImportedPostIDs' );
 		$this->loader->add_action( 'wp_ajax_insertCollectionInDB', $plugin_admin, 'insertCollectionInDB' );
 		$this->loader->add_action( 'wp_ajax_updateImportJob', $plugin_admin, 'updateImportJob' );
+        $this->loader->add_action( 'wp_ajax_updateJobImportList', $plugin_admin, 'updateJobImportList' );
 		$this->loader->add_action( 'wp_ajax_updateImportedItems', $plugin_admin, 'updateImportedItems' );
 		$this->loader->add_action( 'wp_ajax_getTaxonomies', $plugin_admin, 'getTaxonomies' );
 		$this->loader->add_action( 'wp_ajax_getCollectionMetaDate', $plugin_admin, 'getCollectionMetaDate' );
 		$this->loader->add_action( 'wp_ajax_deleteRejectedItem', $plugin_admin, 'deleteRejectedItem' );
 		$this->loader->add_action( 'wp_ajax_viewImportedItemsInCollection', $plugin_admin, 'viewImportedItemsInCollection' );
 		$this->loader->add_action( 'wp_ajax_deleteCRONJob', $plugin_admin, 'deleteCRONJob' );
-		$this->loader->add_action( 'wp_ajax_deleteAllRejected', $plugin_admin, 'deleteAllRejected' );
+
+		$this->loader->add_action( 'wp_ajax_addIgnoredItemIds', $plugin_admin, 'addIgnoredItemIds' );
+
 		$this->loader->add_action( 'wp_ajax_isCollectionInCRON', $plugin_admin, 'isCollectionInCRON' );
 		$this->loader->add_action( 'wp_ajax_loadPostSelector', $plugin_admin, 'loadPostSelector' );
 		$this->loader->add_action( 'wp_ajax_getExistingItemIDs', $plugin_admin, 'getExistingItemIDs' );
 		$this->loader->add_action( 'wp_ajax_checkIfImportPostOnlyComplete', $plugin_admin, 'checkIfImportPostOnlyComplete' );
 		$this->loader->add_action( 'wp_ajax_checkForErrorImports', $plugin_admin, 'checkForErrorImports' );
 		$this->loader->add_action( 'wp_ajax_checkIfImportComplete', $plugin_admin, 'checkIfImportComplete' );
-		$this->loader->add_action( 'wp_ajax_showImportList', $plugin_admin, 'showImportList' );
 		$this->loader->add_action( 'wp_ajax_saveFieldLabels', $plugin_admin, 'saveFieldLabels' );
 		$this->loader->add_action( 'wp_ajax_deleteFieldLabel', $plugin_admin, 'deleteFieldLabel' );
 	}
